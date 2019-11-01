@@ -1,0 +1,26 @@
+#include <conio.h> 
+tidak bisa digunakan dalam linux, semua fungtions yang berhubungan dengan conio tidak
+bisa digunakan. 
+seperti:
+clrscr
+delline
+getch
+getche
+gotoxy
+kbhit
+wherex
+wherey
+textcolor
+textbackground
+
+conio.h -> library yang dibikin oleh borland yang digunakan untuk Turbo C/C++. 
+Dan Turbo C/C++ hanya untuk DOS (windows).
+Di Linux, compiler yang digunakan itu GCC, karna mendukung standard C/C++.
+
+sudah mencoba pemecahan masalah dengan menggunakan |
+#include <curses.h>
+
+dengan menginstall libarary
+sudo apt-get install libncurses5-dev libncursesw5-dev
+
+tapi masih tidak bisa di gunakan
