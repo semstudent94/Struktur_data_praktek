@@ -116,23 +116,23 @@ int main()
 			cout<<"==============================================================="<<endl;
 			cout<<endl;
 			     for(i=a-5;i>=0;i--)
-     {
-      for(j=0;j<=i;j++)
-         {
-          if(data[j].kode>data[j+1].kode)
-             {
-              temp=data[j].kode;
-                data[j].kode=data[j+1].kode;
-                data[j+1].kode=temp;
-             }
-         }
-     }
-  gotoxy(25,5);cout<<"Pensortiran Berdasarkan Kode :"<<endl;
-     for(i=0;i<a;i++) //buble sort
-        {
-         cout<<"\t\t\t    "<<data[i].kode<<endl;
-     }
-             getche();
+//     {
+//      for(j=0;j<=i;j++)
+//         {
+//          if(data[j].kode>data[j+1].kode)
+//             {
+ //             temp=data[j].kode;
+ //               data[j].kode=data[j+1].kode;
+  //              data[j+1].kode=temp;
+  //           }
+  //       }
+ //    }
+//  gotoxy(25,5);cout<<"Pensortiran Berdasarkan Kode :"<<endl;
+ //    for(i=0;i<a;i++) //buble sort
+ //       {
+  //       cout<<"\t\t\t    "<<data[i].kode<<endl;
+  //   }
+  //           getche();
 			
 			
 			cout<<"LANJUT KEMENU UTAMA ?  (Y/N)  : "; cin>>kembali;
