@@ -4,26 +4,25 @@
 
 using namespace std;
 
-struct mahasiswa
+struct pelanggan
 {
-	int nilai[7];
-	char nim[50],nama[50],grade[7],kembali,kelas[7],alamat[100];
+	char noHP[60],kp[50],nama[50],grade[7],kembali,kelas[7],alamat[100];
 	float nilaitotal;	
 };
 
 int main()
 {
 	{
-	system ("COLOR 37");
-	mahasiswa ltp[50];
-	int pilih,jml_mhs;
-	char kembali, Nim;
+	system ("COLOR 50");
+	pelanggan ltp[50];
+	int pilih,jml_plg, biaya,jumlahBayar,uangKembalian,berat,totalberat;
+	char kembali, kp[50], nama[30],alamat[60],noHP[60],kdKategori,kategoriCucian[30];
 	atas:
 		cout<<"==================================================================="<<endl;
 		cout<<"----------------------- RESPONSI STRUKTUR DATA PRAKTEK-------------"<<endl;
 		cout<<"==================================================================="<<endl;
-		cout<<"1. Input data"<<endl;
-		cout<<"2. Mengurutkan Data"<<endl;
+		cout<<"1. Input data Pelanggan"<<endl;
+		cout<<"2. Sortir data Loundry"<<endl;
 		cout<<"3. Mencari data"<<endl;
 		cout<<"4. Keluar"<<endl;
 		cout<<"==================================================================="<<endl;
@@ -35,60 +34,65 @@ int main()
 		{
 			system("cls");
 			cout<<"==============================================================="<<endl;
-			cout<<"========================Data Mahasiswa========================="<<endl;
+			cout<<"========================Data Pelanggan========================="<<endl;
 			cout<<"==============================================================="<<endl;
 			cout<<endl;
-					cout<<"Masukkan data mahasiswa = "; cin >> jml_mhs;
-					mahasiswa ltp[jml_mhs];
+					cout<<"Masukkan Jumlah Data Pelanggan = "; cin >> jml_plg;
+					pelanggan ltp[jml_plg];
 					
 					int i;
-					for (i=0; i<jml_mhs; i++)
+					for (i=0; i<jml_plg; i++)
 					{
-						cout <<"Input data MAHASISWA ke-"<<i+1<< endl;
+						cout <<"Input data PELANGGAN ke-"<<i+1<< endl;
 						
-						cout <<"NIM : "; cin >> ltp[i].nim;
-						
-						cout <<"Nama : "; cin >> ltp[i].nama;
-						
-						cout <<"Kelas : "; cin >> ltp[i].kelas;
-						
-						cout <<"Alamat : "; cin >> ltp[i].alamat;
-						
-					cout<<"==========================================================================="<<endl;
-					cout<<"Mata Kuliah				||	SKS	||	Grade Nilai		"<<endl;
-					cout<<"==========================================================================="<<endl;
-					cout<<"Pendidikan Agama			||	2	||		";cin>> ltp[i].grade[0];
-					cout<<"Literasi TIK				||	2	||		";cin>> ltp[i].grade[1];
-					cout<<"K3LH					||	2	||		";cin>> ltp[i].grade[2];
-					cout<<"Matematika Telekomunikasi I		||	3	||		";cin>> ltp[i].grade[3];
-					cout<<"DasTekKomPro				||	3	||		";cin>> ltp[i].grade[4];
-					cout<<"Rangkaian Listrik			||	3	||		";cin>> ltp[i].grade[5];
-					cout<<"Bengkel Mekanikal			||	2	||		";cin>> ltp[i].grade[6];
-					cout<<"DaSisTel				||	3	||		";cin>> ltp[i].grade[7];
-					cout<<"=========================================================================="<<endl; 		
+						cout<<"----------------------------------------------------"<<endl;
+						cout<<"Kode Pelanggan		: ";cin>>kp;
+						cout<<"Nama Pelanggan		: ";cin>>nama;
+						cout<<"Alamat				: ";cin>>alamat;
+						cout<<"No Handphone			: ";cin>>noHP;
+						cout<<"----------------------------------------------------"<<endl;
+						cout<<"\tKategori Cucian"<<endl;
+						cout<<"----------------------------------------------------"<<endl;
+						cout<<"1. Reguler"<<endl;
+						cout<<"2. Ekspress"<<endl;
+						cout<<"3. Kilat"<<endl;
+						cout<<"----------------------------------------------------"<<endl;
+						cout<<"Input No Kategori [1-3]		: ";cin>>kdKategori;
+							switch(kdKategori)
+								{
+								case '1' :
+								cout<<"Regular"<<endl;
+								biaya=9000;
+								break;
+								case '2' :
+								cout<<"Express"<<endl;
+								biaya=12000;
+								break;
+								case '3' :
+								cout<<"Kilat"<<endl;
+								biaya=15000;
+								break;
+								default:
+								cout<<"kode salah"<<endl;
+								break;
+								}
+						cout<<"Berat Cucian (Kg)		: ";cin>>berat;		
+						cout<<"----------------------------------------------------"<<endl;
+						cout<<"\tResi Pesanan Laundry"<<endl;
+						cout<<"----------------------------------------------------"<<endl;
+						cout<<"Nama Pelanggan			: "<<nama<<endl;
+						cout<<"Alamat				: "<<alamat<<endl;
+						cout<<"No Handphone			: "<<noHP<<endl;
+						cout<<kategoriCucian<<"	: Rp. "<<biaya<<endl;
+						totalberat=biaya*berat;
+						cout<<"Berat Cucian			: Rp. "<<totalberat<<endl;
+						cout<<"===================================================="<<endl;
+						cout<<"Total Bayar			: Rp. ";cin>>jumlahBayar;
+						uangKembalian=jumlahBayar-totalberat;
+						cout<<"Kembalian			: Rp. "<<uangKembalian<<endl;
+						cout<<"===================================================="<<endl;
+						cout<<"Terima kasih telah datang di laundry Kami"<<endl;
 					}
-		/*
-		
-		tidak error tapi tidak bisa keluar hasill inputannya, );
-				for(int i=0;i<8;i++)
-				{	if(ltp[i].grade[i]=='A' )
-					{
-					ltp[i].nilai[i] = 4;
-					} else if (ltp[i].grade[i]=='B') {
-   					ltp[i].nilai[i] = 3;
-  					} else if (ltp[i].grade[i]=='C') {
-   					ltp[i].nilai[i] = 2;
-  					} else if (ltp[i].grade[i]=='D') {
-   					ltp[i].nilai[i] = 1;
-  					} else {
-   					ltp[i].nilai[i]= 0;
-  					}
-				}
-
-				nilaitotal=(ltp[i].nilai[0])*(2+ltp[i].nilai[1])*(2+ltp[i].nilai[2])*(2+ltp[i].nilai[3])*(3+ltp[i].nilai[4])*(3+ltp[i].nilai[5])*(3+ltp[i].nilai[6])*(2+ltp[i].nilai[7]*3);
-				cout<<"DATA IP MAHASISWA : "<<nilaitotal/20<<endl;
-		
-		*/
 
 
 			cout<<"LANJUT KEMENU UTAMA ?  (Y/N)  : "; cin>>kembali;
@@ -108,11 +112,27 @@ int main()
 		{
 			system("cls");
 			cout<<"==============================================================="<<endl;
-			cout<<"=======================Mengurutkan Data========================"<<endl;
+			cout<<"=======================  Data Londry = ========================"<<endl;
 			cout<<"==============================================================="<<endl;
 			cout<<endl;
-			
-			
+			     for(i=a-5;i>=0;i--)
+     {
+      for(j=0;j<=i;j++)
+         {
+          if(data[j].kode>data[j+1].kode)
+             {
+              temp=data[j].kode;
+                data[j].kode=data[j+1].kode;
+                data[j+1].kode=temp;
+             }
+         }
+     }
+  gotoxy(25,5);cout<<"Pensortiran Berdasarkan Kode :"<<endl;
+     for(i=0;i<a;i++) //buble sort
+        {
+         cout<<"\t\t\t    "<<data[i].kode<<endl;
+     }
+             getche();
 			
 			
 			cout<<"LANJUT KEMENU UTAMA ?  (Y/N)  : "; cin>>kembali;
@@ -133,18 +153,18 @@ int main()
 			cout<<"=========================Mencari Data=========================="<<endl;
 			cout<<"==============================================================="<<endl;
 			cout<<endl;
-			cout<<"Masukkan Nim Mahasiswa : ";
-			cin>>Nim;
-			for(int i=0; i<jml_mhs; i++)
+			cout<<"Masukkan Kode Pelanggan : ";
+			cin>>kp;
+			for(int i=0; i<jml_plg; i++)
 			{
-				if(ltp[i].nim,Nim)
+				if(ltp[i].kp,kp)
 				{
 					cout<<endl;
-					cout<<"Nim : "<<ltp[i].nim;
+					cout<<"kode pelanggan : "<<ltp[i].kp;
 					cout<<endl;
 					cout<<"Nama : "<<ltp[i].nama;
 					cout<<endl;
-					cout<<"Kelas : "<<ltp[i].kelas;
+					cout<<"Nomor HP : "<<ltp[i].noHP;
 					cout<<endl;
 					cout<<"Alamat : "<<ltp[i].alamat;
 					cout<<endl;			
