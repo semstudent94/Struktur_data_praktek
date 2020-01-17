@@ -19,7 +19,7 @@ int main()
 	char kembali, kp[50], nama[30],alamat[60],noHP[60],kdKategori,kategoriCucian[30];
 	atas:
 		cout<<"==================================================================="<<endl;
-		cout<<"----------------------- RESPONSI STRUKTUR DATA PRAKTEK-------------"<<endl;
+		cout<<"------------------- RESPONSI STRUKTUR DATA PRAKTEK UAS-------------"<<endl;
 		cout<<"==================================================================="<<endl;
 		cout<<"1. Input data Pelanggan"<<endl;
 		cout<<"2. Sortir data Loundry"<<endl;
