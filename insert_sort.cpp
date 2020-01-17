@@ -10,7 +10,7 @@ main(){
     cin>>n;
 
       for(i=1;i<=n;i++){
-        cout<<"\nMasukkan Data Ke -"<<i<<":";
+        cout<<"\nMasuKkan Data Ke -"<<i<<":";
           cin>>data[i];
       }
 
