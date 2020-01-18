@@ -135,7 +135,7 @@ int main()
             getche();
 			
 			
-			cout<<"LANJUT KEMENU UTAMA ?  (Y/N)  : "; cin>>kembali;
+			cout<<"Balik kemenu Utama ?  (Y/N)  : "; cin>>kembali;
 			if(kembali=='Y' or 'y')
 			{
 				system("cls");
