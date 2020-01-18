@@ -23,7 +23,7 @@ int main()
 		cout<<"==================================================================="<<endl;
 		cout<<"1. Input data Pelanggan"<<endl;
 		cout<<"2. Sortir data Loundry"<<endl;
-		cout<<"3. Mencari data"<<endl;
+		cout<<"3. Mencari Data"<<endl;
 		cout<<"4. Keluar"<<endl;
 		cout<<"==================================================================="<<endl;
 		cout<<"Masukkan Pilihan  : ";
@@ -43,7 +43,7 @@ int main()
 					int i;
 					for (i=0; i<jml_plg; i++)
 					{
-						cout <<"Input data PELANGGAN ke-"<<i+1<< endl;
+						cout <<"Input Data PELANGGAN ke-"<<i+1<< endl;
 						
 						cout<<"----------------------------------------------------"<<endl;
 						cout<<"Kode Pelanggan		: ";cin>>kp;
@@ -73,7 +73,7 @@ int main()
 								biaya=15000;
 								break;
 								default:
-								cout<<"kode salah"<<endl;
+								cout<<"Kode Salah"<<endl;
 								break;
 								}
 						cout<<"Berat Cucian (Kg)		: ";cin>>berat;		
@@ -160,7 +160,7 @@ int main()
 				if(ltp[i].kp,kp)
 				{
 					cout<<endl;
-					cout<<"kode pelanggan : "<<ltp[i].kp;
+					cout<<"Kode Pelanggan : "<<ltp[i].kp;
 					cout<<endl;
 					cout<<"Nama : "<<ltp[i].nama;
 					cout<<endl;
